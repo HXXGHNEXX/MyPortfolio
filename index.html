@@ -158,13 +158,37 @@
     }
 
     .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
       font-family: "Franklin Gothic Demi", "Franklin Gothic Medium", "Franklin Gothic", "Inter", sans-serif;
       font-size: 1.35rem;
       font-weight: 700;
       letter-spacing: -0.05em;
     }
 
-    .logo span {
+    .logo-initials {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 36px;
+      height: 36px;
+
+      border-radius: 10px;
+
+      background: linear-gradient(135deg, var(--primary) 0%, var(--indigo) 100%);
+
+      color: white;
+
+      font-size: 0.75rem;
+      font-weight: 800;
+
+      letter-spacing: 0;
+    }
+
+    .logo-text span {
       color: var(--primary);
     }
 
@@ -2692,6 +2716,16 @@ body {
           translateY(0);
       }
 
+      .logo-initials {
+        width: 32px;
+        height: 32px;
+        font-size: 0.7rem;
+      }
+
+      .logo {
+        font-size: 1.2rem;
+      }
+
       .nav-links a {
         display: block;
 
@@ -2828,7 +2862,8 @@ body {
     <div class="container nav-inner">
 
       <a href="#home" class="logo">
-        Maydard<span>.</span>
+        <span class="logo-initials">MS</span>
+        <span class="logo-text">Maydard<span>.</span></span>
       </a>
 
       <button
@@ -3281,6 +3316,13 @@ body {
             Database
           </button>
 
+          <button
+            class="filter-btn"
+            data-filter="mobile"
+          >
+            Mobile
+          </button>
+
         </div>
 
 
@@ -3514,6 +3556,92 @@ body {
 
                 <span class="tech-tag">
                   MySQL
+                </span>
+
+              </div>
+
+
+              <div class="project-links">
+
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  GitHub
+                </a>
+
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Live Demo
+
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 04 -->
+
+          <article
+            class="project-card reveal"
+            data-category="mobile"
+          >
+
+            <div class="project-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=1200&q=85"
+                alt="Mobile app development project"
+                loading="lazy"
+              >
+
+              <div class="project-overlay"></div>
+
+              <span class="project-number">
+                04
+              </span>
+
+            </div>
+
+
+            <div class="project-content">
+
+              <h3>
+                Mobile Inventory Tracker
+              </h3>
+
+              <p>
+                A responsive mobile-friendly application
+                for tracking inventory, scanning items,
+                and managing stock on the go.
+              </p>
+
+
+              <div class="tech-tags">
+
+                <span class="tech-tag">
+                  HTML
+                </span>
+
+                <span class="tech-tag">
+                  CSS
+                </span>
+
+                <span class="tech-tag">
+                  JavaScript
+                </span>
+
+                <span class="tech-tag">
+                  PWA
                 </span>
 
               </div>
