@@ -118,6 +118,10 @@
     .container {
       width: min(92%, var(--max-width));
       margin: auto;
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
     }
 
 
@@ -267,6 +271,632 @@
       font-size: 1.05rem;
     }
 
+    .theme-toggle {
+      width: 42px;
+      height: 42px;
+
+      border: 1px solid var(--border);
+      border-radius: 12px;
+
+      background: white;
+      color: var(--text);
+
+      font-size: 1rem;
+
+      cursor: pointer;
+
+      transition: all 0.3s ease;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .theme-toggle:hover {
+      background: var(--soft);
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Dark Theme */
+    body.dark {
+      --bg: #0f172a;
+      --white: #1e293b;
+      --soft: #1e293b;
+
+      --text: #f1f5f9;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+
+      --border: #334155;
+      --border-light: #1e293b;
+
+      --primary: #3b82f6;
+      --primary-light: #60a5fa;
+      --purple: #40e0d0;
+      --indigo: #0ea5e9;
+      --cyan: #40e0d0;
+
+      --shadow-xs: 0 2px 8px rgba(0, 0, 0, 0.2);
+      --shadow-sm: 0 5px 20px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 15px 40px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 30px 70px rgba(0, 0, 0, 0.5);
+      --shadow-xl: 0 40px 90px rgba(0, 0, 0, 0.6);
+      --shadow-glow: 0 0 40px rgba(64, 224, 208, 0.3);
+    }
+
+    body.dark .navbar {
+      background: rgba(15, 23, 42, 0.95);
+      border-bottom-color: #1e293b;
+    }
+
+    body.dark .nav-links a {
+      color: #cbd5e1;
+    }
+
+    body.dark .nav-button {
+      background: var(--primary);
+      color: white;
+    }
+
+    body.dark .menu-button {
+      background: #1e293b;
+      border-color: #334155;
+      color: #f1f5f9;
+    }
+
+    body.dark .theme-toggle {
+      background: #1e293b;
+      border-color: #334155;
+      color: #f1f5f9;
+    }
+
+    body.dark .theme-toggle:hover {
+      background: #334155;
+      border-color: #3b82f6;
+      color: #3b82f6;
+    }
+
+    body.dark .hero {
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%);
+    }
+
+    body.dark .shape-one {
+      background: rgba(59, 130, 246, 0.08);
+    }
+
+    body.dark .shape-two {
+      background: rgba(124, 58, 237, 0.08);
+    }
+
+    body.dark .shape-three {
+      background: rgba(6, 182, 212, 0.08);
+    }
+
+    body.dark .hero-title {
+      color: #f1f5f9;
+    }
+
+    body.dark .hero-subtitle {
+      color: #94a3b8;
+    }
+
+    body.dark .typing-text {
+      color: #3b82f6;
+    }
+
+    body.dark .skills-marquee {
+      background: rgba(15, 23, 42, 0.8);
+      border-top: 1px solid #1e293b;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    body.dark .marquee-item {
+      color: #94a3b8;
+    }
+
+    body.dark .section-title {
+      color: #f1f5f9;
+    }
+
+    body.dark .section-subtitle {
+      color: #94a3b8;
+    }
+
+    body.dark .about-text {
+      color: #cbd5e1;
+    }
+
+    body.dark .about {
+      background: #0f172a;
+    }
+
+    body.dark .about::before {
+      opacity: 0.035;
+    }
+
+    body.dark .about-card {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .about-icon {
+      background: rgba(59, 130, 246, 0.1);
+      color: #3b82f6;
+    }
+
+    body.dark .about-content h3 {
+      color: #f1f5f9;
+    }
+
+    body.dark .about-content p {
+      color: #cbd5e1;
+    }
+
+    body.dark .about-detail {
+      background: #0f172a;
+      border-color: #334155;
+    }
+
+    body.dark .about-detail-label {
+      color: #94a3b8;
+    }
+
+    body.dark .about-detail-value {
+      color: #f1f5f9;
+    }
+
+    body.dark .profile-card {
+      background: #1e293b;
+    }
+
+    body.dark .profile-card::before {
+      background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+    }
+
+    body.dark .profile-card::after {
+      background: linear-gradient(135deg, #334155 0%, #1e293b 100%);
+    }
+
+    body.dark .profile-avatar {
+      background:
+        radial-gradient(
+          circle at 50% 28%,
+          #475569 0 16%,
+          transparent 16.5%
+        ),
+        radial-gradient(
+          ellipse at 50% 62%,
+          #475569 0 20%,
+          transparent 20.5%
+        ),
+        radial-gradient(
+          ellipse at 50% 100%,
+          #475569 0 40%,
+          transparent 40.5%
+        ),
+        linear-gradient(
+          145deg,
+          #1e293b,
+          #0f172a
+        );
+    }
+
+    body.dark .cta-section {
+      background: #0f172a;
+    }
+
+    body.dark .cta-box {
+      background:
+        radial-gradient(
+          circle at 90% 20%,
+          rgba(124, 58, 237, 0.3),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 10% 90%,
+          rgba(59, 130, 246, 0.25),
+          transparent 30%
+        ),
+        radial-gradient(
+          circle at 50% 50%,
+          rgba(6, 182, 212, 0.15),
+          transparent 50%
+        ),
+        linear-gradient(
+          135deg,
+          #1e293b 0%,
+          #1e1b4b 50%,
+          #172554 100%
+        );
+    }
+
+    body.dark .cta-content h2 {
+      color: #f1f5f9;
+    }
+
+    body.dark .cta-content p {
+      color: #cbd5e1;
+    }
+
+    body.dark .cta-btn {
+      background: white;
+      color: #0f172a;
+    }
+
+    body.dark .cta-btn:hover {
+      background: #f1f5f9;
+    }
+
+    body.dark footer {
+      background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+      border-top-color: #334155;
+    }
+
+    body.dark .footer-copy {
+      color: #94a3b8;
+    }
+
+    body.dark .social-links a {
+      background: #1e293b;
+      border-color: #334155;
+      color: #94a3b8;
+    }
+
+    body.dark .social-links a:hover {
+      background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
+      border-color: transparent;
+      color: white;
+    }
+
+    body.dark .project-card {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .project-card:hover {
+      border-color: #3b82f6;
+    }
+
+    body.dark .project-card .project-image {
+      background: #0f172a;
+    }
+
+    body.dark .project-card .project-tag {
+      background: rgba(59, 130, 246, 0.15);
+      color: #60a5fa;
+    }
+
+    body.dark .contact-card {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .contact-card .contact-icon {
+      background: rgba(59, 130, 246, 0.1);
+      color: #3b82f6;
+    }
+
+    body.dark .contact-card .contact-label {
+      color: #94a3b8;
+    }
+
+    body.dark .contact-card .contact-value {
+      color: #f1f5f9;
+    }
+
+    body.dark .form-input {
+      background: #0f172a;
+      border-color: #334155;
+      color: #f1f5f9;
+    }
+
+    body.dark .form-input:focus {
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    body.dark .form-input::placeholder {
+      color: #64748b;
+    }
+
+    body.dark .footer {
+      background: #0f172a;
+      border-top: 1px solid #1e293b;
+    }
+
+    body.dark .footer-text {
+      color: #94a3b8;
+    }
+
+    body.dark .footer-link {
+      color: #cbd5e1;
+    }
+
+    body.dark .footer-link:hover {
+      color: #3b82f6;
+    }
+
+    body.dark .git-card {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .git-card .git-branch {
+      color: #f1f5f9;
+    }
+
+    body.dark .git-card .git-status {
+      color: #94a3b8;
+    }
+
+    body.dark .git-icon {
+      background: rgba(59, 130, 246, 0.1);
+      color: #3b82f6;
+    }
+
+    body.dark .skill-badge {
+      background: #1e293b;
+      border-color: #334155;
+      color: #cbd5e1;
+    }
+
+    body.dark .skill-badge:hover {
+      border-color: #3b82f6;
+      color: #60a5fa;
+    }
+
+    body.dark .skill {
+      background: #1e293b;
+      border-color: #334155;
+      color: #cbd5e1;
+    }
+
+    body.dark .marquee-container {
+      background: rgba(15, 23, 42, 0.9);
+    }
+
+    body.dark .arc-badge {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .btn {
+      background: #1e293b;
+      border-color: #334155;
+      color: #f1f5f9;
+    }
+
+    body.dark .btn:hover {
+      background: #334155;
+      border-color: #3b82f6;
+    }
+
+    body.dark .btn-primary {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+
+    body.dark .btn-primary:hover {
+      background: #2563eb;
+      border-color: #2563eb;
+    }
+
+    body.dark .btn-outline {
+      background: transparent;
+      border-color: #334155;
+      color: #f1f5f9;
+    }
+
+    body.dark .btn-outline:hover {
+      background: #334155;
+      border-color: #3b82f6;
+      color: #60a5fa;
+    }
+
+    body.dark .hero-buttons .btn::before {
+      background: #1e293b;
+    }
+
+    body.dark .hero-stat {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .hero-stat-value {
+      color: #f1f5f9;
+    }
+
+    body.dark .hero-stat-label {
+      color: #94a3b8;
+    }
+
+    body.dark .about-detail {
+      background: #0f172a;
+      border-color: #334155;
+    }
+
+    body.dark .about-detail-label {
+      color: #94a3b8;
+    }
+
+    body.dark .about-detail-value {
+      color: #f1f5f9;
+    }
+
+    body.dark .info-box {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .info-box:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 5px 20px rgba(59, 130, 246, 0.15);
+    }
+
+    body.dark .info-box small {
+      color: #94a3b8;
+    }
+
+    body.dark .info-box strong {
+      color: #f1f5f9;
+    }
+
+    body.dark .skills-heading {
+      color: #f1f5f9;
+    }
+
+    body.dark .contact-grid {
+      color: #cbd5e1;
+    }
+
+    body.dark .contact-item {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .contact-item:hover {
+      border-color: #3b82f6;
+      box-shadow: 0 5px 20px rgba(59, 130, 246, 0.15);
+    }
+
+    body.dark .contact-item small {
+      color: #94a3b8;
+    }
+
+    body.dark .contact-item span {
+      color: #f1f5f9;
+    }
+
+    body.dark .contact-icon {
+      background: rgba(59, 130, 246, 0.15);
+      color: #3b82f6;
+    }
+
+    body.dark .contact-details {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    body.dark .projects-filter {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .filter-btn {
+      background: transparent;
+      color: #94a3b8;
+    }
+
+    body.dark .filter-btn.active {
+      background: var(--primary);
+      color: white;
+    }
+
+    body.dark .project-card .project-title {
+      color: #f1f5f9;
+    }
+
+    body.dark .project-card .project-desc {
+      color: #94a3b8;
+    }
+
+    body.dark .project-card .project-link {
+      color: #60a5fa;
+    }
+
+    body.dark .contact-content {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .contact-intro h3 {
+      color: #f1f5f9;
+    }
+
+    body.dark .contact-intro p {
+      color: #cbd5e1;
+    }
+
+    body.dark .contact-form {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .form-group label {
+      color: #cbd5e1;
+    }
+
+    body.dark .form-group input,
+    body.dark .form-group textarea {
+      background: #121b2e;
+      border-color: #334155;
+      color: #f1f5f9;
+    }
+
+    body.dark .form-group input:focus,
+    body.dark .form-group textarea:focus {
+      background: #0f172a;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    }
+
+    body.dark .form-group input::placeholder,
+    body.dark .form-group textarea::placeholder {
+      color: #64748b;
+    }
+
+    body.dark .success-message {
+      background: linear-gradient(135deg, #0f2922 0%, #14532d 100%);
+      border-color: #166534;
+      color: #86efac;
+    }
+
+    body.dark textarea.form-input {
+      background: #0f172a;
+      border-color: #334155;
+      color: #f1f5f9;
+    }
+
+    body.dark .footer-content {
+      background: #1e293b;
+      border-color: #334155;
+    }
+
+    body.dark .footer-brand {
+      color: #f1f5f9;
+    }
+
+    body.dark .footer-desc {
+      color: #94a3b8;
+    }
+
+    body.dark .footer-heading {
+      color: #f1f5f9;
+    }
+
+    body.dark .footer-links li a {
+      color: #94a3b8;
+    }
+
+    body.dark .footer-links li a:hover {
+      color: #60a5fa;
+    }
+
+    body.dark .social-link {
+      background: #0f172a;
+      border-color: #334155;
+      color: #94a3b8;
+    }
+
+    body.dark .social-link:hover {
+      background: #3b82f6;
+      border-color: #3b82f6;
+      color: white;
+    }
+
 
     /* =========================================================
        HERO
@@ -279,7 +909,7 @@
       align-items: center;
 
       position: relative;
-      overflow: hidden;
+      overflow: visible;
 
       padding: 150px 0 100px;
 
@@ -390,7 +1020,7 @@
         7.8rem
       );
 
-      line-height: 0.9;
+      line-height: 1.1;
 
       letter-spacing: -0.075em;
 
@@ -440,6 +1070,21 @@
       color: transparent;
 
       text-shadow: none;
+    }
+
+    body.dark .hero-name {
+      background:
+        linear-gradient(
+          100deg,
+          #0f172a 0%,
+          #3b82f6 40%,
+          #40e0d0 70%,
+          #0ea5e9 100%
+        );
+      background-size: 200% 200%;
+
+      -webkit-background-clip: text;
+      background-clip: text;
     }
 
     .hero-role {
@@ -622,6 +1267,607 @@
       transform: rotate(45deg);
     }
 
+
+    /* =========================================================
+       HERO VISUAL — CODE & GIT
+    ========================================================= */
+
+    .hero-visual {
+      position: absolute;
+
+      right: 0;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      width: 520px;
+      height: 380px;
+
+      pointer-events: none;
+
+      z-index: 3;
+
+      opacity: 0;
+      animation: fadeInRight 1s 0.5s ease both;
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateY(-50%) translateX(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(-50%) translateX(0);
+      }
+    }
+
+
+    .code-tag { color: #89b4fa; }
+    .code-attr { color: #f9e2af; }
+    .code-str { color: #a6e3a1; }
+
+
+    /* IDE Stack Cards — IDE Window Style */
+
+    .ide-stack {
+      position: absolute;
+
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 280px;
+      height: 200px;
+
+      pointer-events: auto;
+
+      transition: transform 0.4s cubic-bezier(.22,1,.36,1);
+    }
+
+    .ide-stack:hover {
+      transform: translate(-50%, -50%) scale(1.02);
+    }
+
+    .ide-card {
+      position: absolute;
+
+      width: 280px;
+      height: 160px;
+      padding: 0;
+
+      background: #1e1e2e;
+      border-radius: 10px;
+
+      border: 1px solid rgba(255, 255, 255, 0.08);
+
+      box-shadow:
+        0 15px 35px rgba(15, 23, 42, 0.2),
+        0 5px 15px rgba(15, 23, 42, 0.12);
+
+      overflow: hidden;
+
+      cursor: default;
+
+      display: flex;
+      flex-direction: column;
+
+      transition:
+        transform 0.4s cubic-bezier(.22,1,.36,1),
+        box-shadow 0.4s ease;
+    }
+
+    .ide-card::before {
+      display: none;
+    }
+
+    .ide-header {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      background: #181825;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      flex-shrink: 0;
+    }
+
+    .ide-dots {
+      display: flex;
+      gap: 5px;
+    }
+
+    .ide-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+
+    .ide-dot.red { background: #f38ba8; }
+    .ide-dot.yellow { background: #f9e2af; }
+    .ide-dot.green { background: #a6e3a1; }
+
+    .ide-title {
+      font-size: 0.5rem;
+      font-weight: 500;
+      color: #6c7086;
+      font-family: "Courier New", monospace;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .ide-title i {
+      font-size: 0.55rem;
+    }
+
+    .ide-tabs {
+      display: flex;
+      margin-left: 8px;
+      gap: 0;
+      overflow: hidden;
+    }
+
+    .ide-tab {
+      padding: 4px 8px;
+      font-size: 0.48rem;
+      font-weight: 500;
+      color: #585b70;
+      font-family: "Courier New", monospace;
+      border-bottom: 2px solid transparent;
+      cursor: default;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      white-space: nowrap;
+    }
+
+    .ide-tab.active {
+      color: #cdd6f4;
+      background: rgba(255, 255, 255, 0.04);
+      border-bottom-color: #89b4fa;
+    }
+
+    .ide-tab i {
+      font-size: 0.5rem;
+    }
+
+    .ide-code {
+      padding: 10px 12px;
+    }
+
+    .ide-body {
+      display: flex;
+      min-height: 80px;
+      flex: 1;
+      overflow: visible;
+    }
+
+    .ide-sidebar {
+      width: 60px;
+      background: #11111b;
+      border-right: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 5px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 3px;
+      font-size: 0.35rem;
+      color: #6c7086;
+      cursor: default;
+      transition: background 0.2s;
+    }
+
+    .sidebar-item i {
+      font-size: 0.55rem;
+    }
+
+    .sidebar-item.active {
+      color: #cdd6f4;
+      background: rgba(255, 255, 255, 0.04);
+      border-left: 2px solid #89b4fa;
+    }
+
+    .sidebar-item.active-file {
+      color: #a6e3a1;
+    }
+
+    .sidebar-item.sub {
+      padding-left: 8px;
+    }
+
+    .sidebar-item:hover {
+      background: rgba(255, 255, 255, 0.04);
+    }
+
+    .ide-code pre {
+      margin: 0;
+      font-size: 0.5rem;
+      line-height: 1.5;
+      font-family: "Courier New", Consolas, monospace;
+    }
+
+    .ide-code code {
+      color: #cdd6f4;
+    }
+
+    .code-kw { color: #cba6f7; }
+    .code-cls { color: #f9e2af; }
+    .code-fn { color: #89b4fa; }
+    .code-str { color: #a6e3a1; }
+    .code-attr { color: #89dceb; }
+
+    .ide-footer-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 3px 10px;
+      background: #11111b;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      font-size: 0.45rem;
+      color: #6c7086;
+      flex-shrink: 0;
+      margin-top: auto;
+    }
+
+    .ide-footer-bar i {
+      font-size: 0.5rem;
+    }
+
+    .ide-android .ide-body {
+      display: flex;
+    }
+
+    .ide-android .ide-code {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .android-emulator {
+      width: 80px;
+      background: #1a1a2e;
+      border-left: 1px solid rgba(255, 255, 255, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+      font-size: 0.35rem;
+      color: #cdd6f4;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .emu-phone {
+      width: 60px;
+      height: 100px;
+      background: #0f0f0f;
+      border-radius: 6px;
+      border: 2px solid #333;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+      position: relative;
+    }
+
+    .emu-notch {
+      width: 20px;
+      height: 4px;
+      background: #333;
+      border-radius: 0 0 4px 4px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 1;
+    }
+
+    .emu-screen {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      background: #1a1a2e;
+      overflow: hidden;
+    }
+
+    .emu-status-bar {
+      display: flex;
+      justify-content: space-between;
+      padding: 2px 4px;
+      background: #11111b;
+      font-size: 0.28rem;
+      color: #a6adc8;
+    }
+
+    .emu-status-bar i {
+      font-size: 0.25rem;
+    }
+
+    .emu-app-bar {
+      padding: 2px 4px;
+      background: #16213e;
+      font-size: 0.32rem;
+      font-weight: 600;
+      color: #89b4fa;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .emu-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      padding: 3px;
+    }
+
+    .emu-icon {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #a6e3a1, #40a02b);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.4rem;
+      color: #fff;
+    }
+
+    .emu-text {
+      font-size: 0.26rem;
+      color: #a6adc8;
+      text-align: center;
+    }
+
+    .emu-btn {
+      padding: 1px 6px;
+      border-radius: 2px;
+      background: linear-gradient(135deg, #89b4fa, #74c7ec);
+      color: #1e1e2e;
+      font-size: 0.26rem;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .emu-nav-bar {
+      display: flex;
+      justify-content: space-around;
+      padding: 2px 4px;
+      background: #11111b;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+    }
+
+    .emu-nav-bar span {
+      color: #6c7086;
+      font-size: 0.3rem;
+    }
+
+    .terminal .terminal-user {
+      color: #a6e3a1;
+    }
+
+    .terminal .terminal-path {
+      color: #89b4fa;
+    }
+
+    .terminal .terminal-cmd {
+      color: #cdd6f4;
+    }
+
+    .terminal .terminal-success {
+      color: #a6e3a1;
+    }
+
+    .terminal .terminal-cursor {
+      color: #f5e0dc;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+
+    .ide-vscode {
+      top: 0;
+      left: 0;
+      z-index: 4;
+      transform: rotate(-2deg);
+    }
+
+    .ide-android {
+      top: 15px;
+      left: 15px;
+      z-index: 3;
+      transform: rotate(-1deg);
+    }
+
+    .ide-vs {
+      top: 30px;
+      left: 30px;
+      z-index: 2;
+      transform: rotate(1deg);
+    }
+
+    .ide-ubuntu {
+      top: 45px;
+      left: 45px;
+      z-index: 1;
+      transform: rotate(-1deg);
+    }
+
+    .ide-stack:hover .ide-vscode {
+      transform: rotate(-4deg) translate(-5px, -8px);
+    }
+
+    .ide-stack:hover .ide-android {
+      transform: rotate(2deg) translate(-8px, -4px);
+    }
+
+    .ide-stack:hover .ide-vs {
+      transform: rotate(-2deg) translate(4px, -2px);
+    }
+
+    .ide-stack:hover .ide-ubuntu {
+      transform: rotate(3deg) translate(8px, 2px);
+    }
+
+    .ide-card:hover {
+      z-index: 10 !important;
+      transform: rotate(0deg) translate(0, -8px) scale(1.03) !important;
+    }
+
+
+    /* Git Card */
+
+    .git-card {
+      position: absolute;
+
+      bottom: 15px;
+      left: 0;
+
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      padding: 10px 14px;
+
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(12px);
+
+      border-radius: 10px;
+
+      border: 1px solid var(--border);
+
+      box-shadow: var(--shadow-sm);
+
+      animation: floatWindow 5s 0.5s ease-in-out infinite;
+    }
+
+    .git-icon {
+      width: 36px;
+      height: 36px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 9px;
+
+      background: linear-gradient(135deg, #f97316, #ea580c);
+
+      color: white;
+
+      font-size: 1.1rem;
+    }
+
+    .git-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .git-branch {
+      font-size: 0.72rem;
+      font-weight: 700;
+
+      color: var(--text);
+    }
+
+    .git-status {
+      font-size: 0.62rem;
+
+      color: var(--text-muted);
+    }
+
+    .git-status i {
+      color: #22c55e;
+      margin-right: 3px;
+    }
+
+
+    /* Arc Tech Badges */
+
+    .arc-badge {
+      position: absolute;
+
+      width: 44px;
+      height: 44px;
+
+      display: grid;
+      place-items: center;
+
+      border-radius: 50%;
+
+      background: white;
+
+      border: 1.5px solid var(--border);
+
+      box-shadow: var(--shadow-sm);
+
+      font-size: 1.15rem;
+    }
+
+    /* Left arc */
+    .arc-html {
+      top: 30px;
+      left: -10px;
+      color: #e44d26;
+      animation: arcPulse 4s ease-in-out infinite;
+    }
+
+    .arc-css {
+      top: 90px;
+      left: -25px;
+      color: #264de4;
+      animation: arcPulse 4s 0.4s ease-in-out infinite;
+    }
+
+    .arc-js {
+      bottom: 60px;
+      left: -15px;
+      color: #f7df1e;
+      animation: arcPulse 4s 0.8s ease-in-out infinite;
+    }
+
+    /* Right arc */
+    .arc-react {
+      top: 20px;
+      right: -5px;
+      color: #61dafb;
+      animation: arcPulse 4s 0.2s ease-in-out infinite;
+    }
+
+    .arc-kotlin {
+      bottom: 100px;
+      right: -20px;
+      color: #7f52ff;
+      animation: arcPulse 4s 0.6s ease-in-out infinite;
+    }
+
+    .arc-csharp {
+      bottom: 40px;
+      right: -10px;
+      color: #68217a;
+      animation: arcPulse 4s 1s ease-in-out infinite;
+    }
+
+    @keyframes arcPulse {
+      0%, 100% {
+        transform: translateY(0) scale(1);
+        box-shadow: var(--shadow-sm);
+      }
+      50% {
+        transform: translateY(-6px) scale(1.05);
+        box-shadow: 0 10px 25px rgba(37, 99, 235, 0.12);
+      }
+    }
+
+
     .hero-scroll {
       position: absolute;
 
@@ -646,14 +1892,15 @@
       letter-spacing: 2.5px;
     }
 
-    .scroll-line {
-      width: 1.5px;
-      height: 35px;
+    .scroll-arrow {
+      font-size: 0.9rem;
+      color: var(--primary);
+      animation: scrollBounce 1.7s infinite;
+    }
 
-      background: linear-gradient(180deg, var(--primary) 0%, transparent 100%);
-
-      animation:
-        scrollPulse 1.7s infinite;
+    @keyframes scrollBounce {
+      0%, 100% { transform: translateY(0); opacity: 1; }
+      50% { transform: translateY(6px); opacity: 0.5; }
     }
 
 
@@ -722,6 +1969,28 @@
 
     .about {
       background: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0.02;
+      background:
+        url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cpath d='M20 20h40v0h40M20 20v40M60 20v20h40M100 60h40v40M140 60v-40M140 100v40h-40M100 140h-40v40M60 140v-40H20M20 180h40M180 20v40h-40M180 80h-40v40M140 120v40h40M180 160v20' fill='none' stroke='%232563eb' stroke-width='2'/%3E%3Ccircle cx='20' cy='20' r='4' fill='%232563eb'/%3E%3Ccircle cx='60' cy='20' r='3' fill='%232563eb'/%3E%3Ccircle cx='100' cy='20' r='4' fill='%232563eb'/%3E%3Ccircle cx='60' cy='60' r='3' fill='%232563eb'/%3E%3Ccircle cx='100' cy='60' r='4' fill='%232563eb'/%3E%3Ccircle cx='140' cy='60' r='3' fill='%232563eb'/%3E%3Ccircle cx='140' cy='100' r='4' fill='%232563eb'/%3E%3Ccircle cx='100' cy='100' r='3' fill='%232563eb'/%3E%3Ccircle cx='100' cy='140' r='4' fill='%232563eb'/%3E%3Ccircle cx='60' cy='140' r='3' fill='%232563eb'/%3E%3Ccircle cx='20' cy='140' r='4' fill='%232563eb'/%3E%3Ccircle cx='20' cy='180' r='3' fill='%232563eb'/%3E%3Ccircle cx='180' cy='20' r='4' fill='%232563eb'/%3E%3Ccircle cx='180' cy='80' r='3' fill='%232563eb'/%3E%3Ccircle cx='140' cy='80' r='4' fill='%232563eb'/%3E%3Ccircle cx='140' cy='120' r='3' fill='%232563eb'/%3E%3Ccircle cx='180' cy='120' r='4' fill='%232563eb'/%3E%3Ccircle cx='180' cy='160' r='3' fill='%232563eb'/%3E%3Ccircle cx='180' cy='180' r='4' fill='%232563eb'/%3E%3C/svg%3E");
+      background-size: 200px 200px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .about > * {
+      position: relative;
+      z-index: 1;
     }
 
     .about-grid {
@@ -814,18 +2083,23 @@
 
       background:
         radial-gradient(
-          circle at 50% 27%,
-          #cbd5e1 0 14%,
-          transparent 14.5%
+          circle at 50% 28%,
+          #94a3b8 0 16%,
+          transparent 16.5%
         ),
         radial-gradient(
-          ellipse at 50% 43%,
-          #94a3b8 0 23%,
-          transparent 23.5%
+          ellipse at 50% 62%,
+          #94a3b8 0 20%,
+          transparent 20.5%
+        ),
+        radial-gradient(
+          ellipse at 50% 100%,
+          #94a3b8 0 40%,
+          transparent 40.5%
         ),
         linear-gradient(
           145deg,
-          #ffffff,
+          #f1f5f9,
           #e0e7ff
         );
 
@@ -891,6 +2165,26 @@
       background-clip: text;
 
       color: transparent;
+    }
+
+    .about-content {
+      padding: 35px;
+      border-radius: var(--radius-lg);
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.03),
+        inset 0 1px 0 rgba(255, 255, 255, 0.2);
+    }
+
+    body.dark .about-content {
+      background: rgba(30, 41, 59, 0.1);
+      border-color: rgba(255, 255, 255, 0.03);
+      box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.15),
+        inset 0 1px 0 rgba(255, 255, 255, 0.01);
     }
 
     .about-content p {
@@ -995,6 +2289,66 @@
       transform: translateY(-3px);
 
       box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
+    }
+
+    .languages-heading {
+      margin-top: 28px;
+      margin-bottom: 12px;
+
+      font-family: "Franklin Gothic Demi", "Franklin Gothic Medium", "Franklin Gothic", "Inter", sans-serif;
+
+      font-size: 0.9rem;
+      font-weight: 700;
+
+      color: var(--text);
+    }
+
+    .languages {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .lang-bar-full {
+      display: flex;
+      width: 100%;
+      height: 10px;
+      border-radius: 999px;
+      overflow: hidden;
+      background: var(--border);
+    }
+
+    .lang-segment {
+      height: 100%;
+      transition: width 1s ease;
+    }
+
+    .lang-segment:first-child {
+      border-radius: 999px 0 0 999px;
+    }
+
+    .lang-segment:last-child {
+      border-radius: 0 999px 999px 0;
+    }
+
+    .lang-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.72rem;
+    }
+
+    .lang-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--text-secondary);
+    }
+
+    .lang-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
     }
 
 
@@ -1681,6 +3035,72 @@
 
 
     /* =========================================================
+       BACK TO TOP
+    ========================================================= */
+
+    .back-to-top {
+      position: fixed;
+
+      bottom: 30px;
+      right: 30px;
+
+      width: 48px;
+      height: 48px;
+
+      border-radius: 50%;
+
+      background: var(--primary);
+      color: white;
+
+      border: none;
+
+      font-size: 1rem;
+
+      cursor: pointer;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      opacity: 0;
+      visibility: hidden;
+
+      transform: translateY(20px);
+
+      transition:
+        opacity 0.3s ease,
+        visibility 0.3s ease,
+        transform 0.3s ease,
+        background 0.3s ease;
+
+      box-shadow: 0 8px 25px rgba(37, 99, 235, 0.35);
+
+      z-index: 1000;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+      background: var(--indigo);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(37, 99, 235, 0.45);
+    }
+
+    body.dark .back-to-top {
+      background: #3b82f6;
+      box-shadow: 0 8px 25px rgba(59, 130, 246, 0.35);
+    }
+
+    body.dark .back-to-top:hover {
+      background: #2563eb;
+    }
+
+
+    /* =========================================================
        SCROLL REVEAL
     ========================================================= */
 
@@ -2080,6 +3500,18 @@ body {
 
 .project-grid .project-card:nth-child(3) {
   transition-delay: 0.25s;
+}
+
+.project-grid .project-card:nth-child(4) {
+  transition-delay: 0.35s;
+}
+
+.project-grid .project-card:nth-child(5) {
+  transition-delay: 0.45s;
+}
+
+.project-grid .project-card:nth-child(6) {
+  transition-delay: 0.55s;
 }
 
 .contact-grid .reveal:nth-child(2) {
@@ -2609,6 +4041,195 @@ body {
         opacity: 0.5;
       }
 
+      .hero-visual {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+
+        width: 100%;
+        height: 300px;
+
+        margin-top: 30px;
+        order: 2;
+
+        display: block;
+
+        animation: fadeUp 0.8s 0.3s ease both;
+      }
+
+      .hero-content {
+        order: 1;
+        width: 100%;
+      }
+
+      .ide-tabs {
+        margin-left: 6px;
+      }
+
+      .ide-tab {
+        padding: 3px 6px;
+        font-size: 0.42rem;
+        gap: 3px;
+      }
+
+      .ide-body pre {
+      }
+
+      .ide-stack {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 240px;
+        height: 180px;
+        pointer-events: auto;
+      }
+
+      .ide-stack:hover {
+        transform: translate(-50%, -50%) scale(1.02);
+      }
+
+      .ide-card {
+        width: 240px;
+        height: 140px;
+        padding: 0;
+      }
+
+      .ide-header {
+        padding: 6px 8px;
+      }
+
+      .ide-dot {
+        width: 7px;
+        height: 7px;
+      }
+
+      .ide-title {
+        font-size: 0.45rem;
+      }
+
+      .ide-tabs {
+        margin-left: 6px;
+      }
+
+      .ide-tab {
+        padding: 3px 6px;
+        font-size: 0.42rem;
+        gap: 3px;
+      }
+
+      .ide-body {
+        min-height: 70px;
+      }
+
+      .ide-sidebar {
+        width: 50px;
+        padding: 4px 0;
+      }
+
+      .sidebar-item {
+        padding: 4px 2px;
+        font-size: 0.3rem;
+      }
+
+      .sidebar-item i {
+        font-size: 0.48rem;
+      }
+
+      .sidebar-item.sub {
+        padding-left: 6px;
+      }
+
+      .ide-code {
+        padding: 8px 10px;
+      }
+
+      .ide-code pre {
+        font-size: 0.45rem;
+      }
+
+      .ide-footer-bar {
+        font-size: 0.4rem;
+        padding: 2px 8px;
+      }
+
+      .ide-vscode {
+        top: 0;
+        left: 0;
+      }
+
+      .ide-android {
+        top: 12px;
+        left: 12px;
+      }
+
+      .ide-vs {
+        top: 24px;
+        left: 24px;
+      }
+
+      .ide-ubuntu {
+        top: 36px;
+        left: 36px;
+      }
+
+      .git-card {
+        position: absolute;
+        left: 3%;
+        bottom: 20px;
+      }
+
+      .arc-badge {
+        width: 38px;
+        height: 38px;
+        font-size: 1rem;
+      }
+
+      .arc-html {
+        top: 15px;
+        left: 35%;
+      }
+
+      .arc-css {
+        top: 80px;
+        left: 32%;
+      }
+
+      .arc-js {
+        bottom: 25px;
+        left: 38%;
+      }
+
+      .arc-react {
+        top: 15px;
+        right: 35%;
+      }
+
+      .arc-kotlin {
+        bottom: 70px;
+        right: 32%;
+      }
+
+      .arc-csharp {
+        bottom: 25px;
+        right: 38%;
+      }
+
+      .code-tabs {
+        gap: 0;
+      }
+
+      .code-tab {
+        padding: 4px 8px;
+        font-size: 0.5rem;
+      }
+
+      .code-footer {
+        font-size: 0.48rem;
+        gap: 8px;
+      }
+
       .about-grid {
         grid-template-columns: 1fr;
 
@@ -2663,6 +4284,12 @@ body {
       .menu-button {
         display: grid;
         place-items: center;
+      }
+
+      .theme-toggle {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
       }
 
       .nav-links {
@@ -2742,6 +4369,24 @@ body {
         display: none !important;
       }
 
+      body.dark .nav-links {
+        background: #1e293b;
+        border-color: #334155;
+      }
+
+      body.dark .nav-links a {
+        color: #cbd5e1;
+      }
+
+      body.dark .nav-links a:hover {
+        background: #334155;
+      }
+
+      body.dark .nav-button {
+        background: var(--primary);
+        color: white;
+      }
+
       .nav-button {
         text-align: center;
 
@@ -2788,6 +4433,164 @@ body {
 
       .btn {
         width: 100%;
+      }
+
+      .hero-visual {
+        height: 240px;
+      }
+
+      .ide-stack {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 200px;
+        height: 160px;
+        pointer-events: auto;
+      }
+
+      .ide-stack:hover {
+        transform: translate(-50%, -50%) scale(1.02);
+      }
+
+      .ide-card {
+        width: 200px;
+        height: 120px;
+        padding: 0;
+      }
+
+      .ide-header {
+        padding: 5px 7px;
+      }
+
+      .ide-dot {
+        width: 6px;
+        height: 6px;
+      }
+
+      .ide-title {
+        font-size: 0.4rem;
+        gap: 4px;
+      }
+
+      .ide-title i {
+        font-size: 0.45rem;
+      }
+
+      .ide-tabs {
+        display: none;
+      }
+
+      .ide-body {
+        min-height: 60px;
+      }
+
+      .ide-sidebar {
+        width: 40px;
+        padding: 3px 0;
+      }
+
+      .sidebar-item {
+        padding: 3px 2px;
+        font-size: 0.25rem;
+      }
+
+      .sidebar-item i {
+        font-size: 0.4rem;
+      }
+
+      .sidebar-item.sub {
+        padding-left: 4px;
+      }
+
+      .ide-code {
+        padding: 6px 8px;
+      }
+
+      .ide-code pre {
+        font-size: 0.4rem;
+        line-height: 1.4;
+      }
+
+      .ide-footer-bar {
+        font-size: 0.35rem;
+        padding: 2px 7px;
+      }
+
+      .ide-vscode {
+        top: 0;
+        left: 0;
+      }
+
+      .ide-android {
+        top: 10px;
+        left: 10px;
+      }
+
+      .ide-vs {
+        top: 20px;
+        left: 20px;
+      }
+
+      .ide-ubuntu {
+        top: 30px;
+        left: 30px;
+      }
+
+      .git-card {
+        left: 2%;
+        bottom: 15px;
+        padding: 8px 10px;
+        gap: 8px;
+      }
+
+      .git-icon {
+        width: 30px;
+        height: 30px;
+        font-size: 0.9rem;
+      }
+
+      .git-branch {
+        font-size: 0.65rem;
+      }
+
+      .git-status {
+        font-size: 0.55rem;
+      }
+
+      .arc-badge {
+        width: 34px;
+        height: 34px;
+        font-size: 0.85rem;
+      }
+
+      .arc-html {
+        top: 10px;
+        left: 30%;
+      }
+
+      .arc-css {
+        top: 55px;
+        left: 28%;
+      }
+
+      .arc-js {
+        bottom: 15px;
+        left: 35%;
+      }
+
+      .arc-react {
+        top: 10px;
+        right: 30%;
+      }
+
+      .arc-kotlin {
+        bottom: 50px;
+        right: 28%;
+      }
+
+      .arc-csharp {
+        bottom: 15px;
+        right: 35%;
       }
 
       .project-grid {
@@ -2863,7 +4666,7 @@ body {
 
       <a href="#home" class="logo">
         <span class="logo-initials">MS</span>
-        <span class="logo-text">Maydard<span>.</span></span>
+        <span class="logo-text">Maydard Seño<span>.</span></span>
       </a>
 
       <button
@@ -2895,6 +4698,12 @@ body {
           </a>
         </li>
 
+        <li>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+            <i class="fa-solid fa-moon"></i>
+          </button>
+        </li>
+
       </ul>
 
     </div>
@@ -2924,6 +4733,206 @@ body {
 
 
       <div class="container">
+
+        <!-- Coding & Git Visual -->
+
+        <div class="hero-visual">
+
+          <!-- IDE Cards Stack -->
+          <div class="ide-stack">
+
+            <!-- VS Code Window -->
+            <div class="ide-card ide-vscode">
+              <div class="ide-header">
+                <div class="ide-dots">
+                  <span class="ide-dot red"></span>
+                  <span class="ide-dot yellow"></span>
+                  <span class="ide-dot green"></span>
+                </div>
+                <span class="ide-tabs">
+                  <span class="ide-tab active">
+                    <i class="fa-brands fa-html5"></i> index.html
+                  </span>
+                  <span class="ide-tab">
+                    <i class="fa-solid fa-file-code"></i> App.java
+                  </span>
+                  <span class="ide-tab">
+                    <i class="fa-solid fa-code"></i> Main.kt
+                  </span>
+                </span>
+              </div>
+              <div class="ide-code">
+                <pre><code><span class="code-tag">&lt;div</span> <span class="code-attr">class</span>=<span class="code-str">"portfolio"</span><span class="code-tag">&gt;</span>
+  <span class="code-tag">&lt;h1&gt;</span>Hello World<span class="code-tag">&lt;/h1&gt;</span>
+  <span class="code-tag">&lt;p&gt;</span>Building the future<span class="code-tag">&lt;/p&gt;</span>
+<span class="code-tag">&lt;/div&gt;</span></code></pre>
+              </div>
+              <div class="ide-footer-bar">
+                <span><i class="fa-solid fa-code-branch"></i> main</span>
+                <span>UTF-8</span>
+                <span>VS Code</span>
+              </div>
+            </div>
+
+            <!-- Android Studio Window -->
+            <div class="ide-card ide-android">
+              <div class="ide-header">
+                <div class="ide-dots">
+                  <span class="ide-dot red"></span>
+                  <span class="ide-dot yellow"></span>
+                  <span class="ide-dot green"></span>
+                </div>
+                <span class="ide-title">
+                  <i class="fa-brands fa-android"></i> MainActivity.kt
+                </span>
+              </div>
+              <div class="ide-body">
+                <div class="ide-sidebar">
+                  <div class="sidebar-item">
+                    <i class="fa-brands fa-android"></i> app
+                  </div>
+                  <div class="sidebar-item sub">
+                    <i class="fa-solid fa-folder"></i> manifests
+                  </div>
+                  <div class="sidebar-item sub active">
+                    <img src="https://simpleicons.org/icons/kotlin.svg" alt="Kotlin" width="8" height="8" style="filter: brightness(1) invert(1);"> MainActivity.kt
+                  </div>
+                  <div class="sidebar-item sub">
+                    <i class="fa-solid fa-folder"></i> res
+                  </div>
+                  <div class="sidebar-item">
+                    <i class="fa-brands fa-android"></i> build.gradle
+                  </div>
+                </div>
+                <div class="ide-code">
+                  <pre><code><span class="code-kw">class</span> <span class="code-cls">MainActivity</span> : <span class="code-cls">AppCompatActivity</span>() {
+  <span class="code-kw">override fun</span> <span class="code-fn">onCreate</span>(...) {
+    <span class="code-fn">setContentView</span>(R.layout.activity_main)
+  }
+}</code></pre>
+                </div>
+                <div class="android-emulator">
+                  <div class="emu-phone">
+                    <div class="emu-notch"></div>
+                    <div class="emu-screen">
+                      <div class="emu-status-bar">
+                        <span>12:00</span>
+                        <span><i class="fa-solid fa-signal"></i> <i class="fa-solid fa-wifi"></i> <i class="fa-solid fa-battery-full"></i></span>
+                      </div>
+                      <div class="emu-app-bar">
+                        <span>Agronomy</span>
+                      </div>
+                      <div class="emu-content">
+                        <div class="emu-icon"><i class="fa-solid fa-seedling"></i></div>
+                        <div class="emu-text">Track your plants</div>
+                        <div class="emu-btn">Get Started</div>
+                      </div>
+                      <div class="emu-nav-bar">
+                        <span><i class="fa-solid fa-circle"></i></span>
+                        <span><i class="fa-solid fa-square"></i></span>
+                        <span><i class="fa-solid fa-caret-left"></i></span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ide-footer-bar">
+                <span><i class="fa-brands fa-android"></i> Kotlin</span>
+                <span>UTF-8</span>
+              </div>
+            </div>
+
+            <!-- Visual Studio Window -->
+            <div class="ide-card ide-vs">
+              <div class="ide-header">
+                <div class="ide-dots">
+                  <span class="ide-dot red"></span>
+                  <span class="ide-dot yellow"></span>
+                  <span class="ide-dot green"></span>
+                </div>
+                <span class="ide-title">
+                  <i class="fa-solid fa-laptop-code"></i> Program.cs
+                </span>
+              </div>
+              <div class="ide-code">
+                <pre><code><span class="code-kw">public class</span> <span class="code-cls">Program</span> {
+  <span class="code-kw">static void</span> <span class="code-fn">Main</span>(<span class="code-attr">string</span>[] args) {
+    Console.<span class="code-fn">WriteLine</span>(<span class="code-str">"Hello!"</span>);
+  }
+}</code></pre>
+              </div>
+              <div class="ide-footer-bar">
+                <span><i class="fa-solid fa-laptop-code"></i> C#</span>
+                <span>UTF-8</span>
+              </div>
+            </div>
+
+            <!-- Ubuntu Terminal Window -->
+            <div class="ide-card ide-ubuntu">
+              <div class="ide-header">
+                <div class="ide-dots">
+                  <span class="ide-dot red"></span>
+                  <span class="ide-dot yellow"></span>
+                  <span class="ide-dot green"></span>
+                </div>
+                <span class="ide-title">
+                  <i class="fa-brands fa-ubuntu"></i> Terminal
+                </span>
+              </div>
+              <div class="ide-code terminal">
+                <pre><code><span class="terminal-user">maydard@portfolio</span>:<span class="terminal-path">~</span>$ <span class="terminal-cmd">npm run build</span>
+<span class="terminal-success">✓ Build complete</span>
+<span class="terminal-user">maydard@portfolio</span>:<span class="terminal-path">~</span>$ <span class="terminal-cursor">_</span></code></pre>
+              </div>
+              <div class="ide-footer-bar">
+                <span><i class="fa-brands fa-ubuntu"></i> bash</span>
+                <span>UTF-8</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Git Card -->
+          <div class="git-card">
+
+            <div class="git-icon">
+              <i class="fa-brands fa-git-alt"></i>
+            </div>
+
+            <div class="git-info">
+              <span class="git-branch">main</span>
+              <span class="git-status">
+                <i class="fa-solid fa-check-circle"></i>
+                3 commits today
+              </span>
+            </div>
+
+          </div>
+
+          <!-- Arc Tech Badges — Left Side -->
+          <div class="arc-badge arc-html">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <div class="arc-badge arc-css">
+            <i class="fa-brands fa-css3-alt"></i>
+          </div>
+          <div class="arc-badge arc-js">
+            <i class="fa-brands fa-js"></i>
+          </div>
+
+          <!-- Arc Tech Badges — Right Side -->
+          <div class="arc-badge arc-react">
+            <i class="fa-brands fa-react"></i>
+          </div>
+          <div class="arc-badge arc-kotlin">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3d/Kotlin_icon_%282016-2021%29.svg?utm_source=commons.wikimedia.org&utm_campaign=index&utm_content=original" alt="Kotlin" width="14" height="14">
+          </div>
+          <div class="arc-badge arc-csharp">
+            <img src="https://gistcdn.githack.com/johndward01/95c1d09de9e3707cfb4154989962376d/raw/f74007782421219d9e9ab4b6a27de2e172a8b714/csharp-logo.svg" alt="C-Sharp" width="24" height="24">
+          </div>
+
+        </div>
+
 
         <div class="hero-content">
 
@@ -2999,7 +5008,9 @@ body {
 
         Scroll
 
-        <span class="scroll-line"></span>
+        <span class="scroll-arrow">
+          <i class="fa-solid fa-angles-down"></i>
+        </span>
 
       </div>
 
@@ -3019,9 +5030,23 @@ body {
           <span class="marquee-dot"></span>
           <span>JavaScript</span>
           <span class="marquee-dot"></span>
+          <span>ReactJS</span>
+          <span class="marquee-dot"></span>
           <span>PHP</span>
           <span class="marquee-dot"></span>
+          <span>C#</span>
+          <span class="marquee-dot"></span>
+          <span>VB.NET</span>
+          <span class="marquee-dot"></span>
+          <span>Java</span>
+          <span class="marquee-dot"></span>
+          <span>Kotlin</span>
+          <span class="marquee-dot"></span>
           <span>MySQL</span>
+          <span class="marquee-dot"></span>
+          <span>Android Studio</span>
+          <span class="marquee-dot"></span>
+          <span>Visual Studio</span>
           <span class="marquee-dot"></span>
           <span>Web Development</span>
           <span class="marquee-dot"></span>
@@ -3039,9 +5064,23 @@ body {
           <span class="marquee-dot"></span>
           <span>JavaScript</span>
           <span class="marquee-dot"></span>
+          <span>ReactJS</span>
+          <span class="marquee-dot"></span>
           <span>PHP</span>
           <span class="marquee-dot"></span>
+          <span>C#</span>
+          <span class="marquee-dot"></span>
+          <span>VB.NET</span>
+          <span class="marquee-dot"></span>
+          <span>Java</span>
+          <span class="marquee-dot"></span>
+          <span>Kotlin</span>
+          <span class="marquee-dot"></span>
           <span>MySQL</span>
+          <span class="marquee-dot"></span>
+          <span>Android Studio</span>
+          <span class="marquee-dot"></span>
+          <span>Visual Studio</span>
           <span class="marquee-dot"></span>
           <span>Web Development</span>
           <span class="marquee-dot"></span>
@@ -3090,7 +5129,9 @@ body {
 
           <div class="profile-card reveal">
 
-            <div class="profile-avatar"></div>
+            <div class="profile-avatar">
+              <img src="https://drive.google.com/thumbnail?id=186_O2sfgOzS21-oOSHMxx30xjKANc3fE" alt="Maydard Seño" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;">
+            </div>
 
             <div class="profile-badge">
               MS
@@ -3223,7 +5264,17 @@ body {
 
               <span class="skill">JavaScript</span>
 
+              <span class="skill">ReactJS</span>
+
               <span class="skill">PHP</span>
+
+              <span class="skill">C#</span>
+
+              <span class="skill">VB.NET</span>
+
+              <span class="skill">Java</span>
+
+              <span class="skill">Kotlin</span>
 
               <span class="skill">MySQL</span>
 
@@ -3242,8 +5293,40 @@ body {
               </span>
 
               <span class="skill">
+                Android Development
+              </span>
+
+              <span class="skill">
                 Problem Solving
               </span>
+
+            </div>
+
+            <div class="languages-heading">
+              Programming Languages
+            </div>
+
+            <div class="languages">
+
+              <div class="lang-bar-full">
+                <div class="lang-segment" style="width:25%;background:#f1e05a;" title="JavaScript 25%"></div>
+                <div class="lang-segment" style="width:22%;background:#e34c26;" title="HTML 22%"></div>
+                <div class="lang-segment" style="width:18%;background:#563d7c;" title="CSS 18%"></div>
+                <div class="lang-segment" style="width:15%;background:#178600;" title="PHP 15%"></div>
+                <div class="lang-segment" style="width:10%;background:#5d00fd;" title="VB.NET 10%"></div>
+                <div class="lng-segment" style="width:5%;background:#b07219;" title="Java 5%"></div>
+                <div class="lang-segment" style="width:5%;background:#A97BFF;" title="Kotlin 5%"></div>
+              </div>
+
+              <div class="lang-legend">
+                <span class="lang-legend-item"><span class="lang-dot" style="background:#f1e05a;"></span> JavaScript</span>
+                <span class="lang-legend-item"><span class="lang-dot" style="background:#e34c26;"></span> HTML</span>
+                <span class="lang-legend-item"><span class="lang-dot" style="background:#563d7c;"></span> CSS</span>
+                <span class="lang-legend-item"><span class="lang-dot" style="background:#178600;"></span> PHP</span>
+                <span class="lang-legend-item"><span class="lang-dot" style="background:#5d00fd;"></span> VB.NET</span>
+                <span class="lang-legend-item"><span class="lang-dot" style="background:#b07219;"></span> Java</span>
+                <span class="lang-legend-item"><span class="lang-dot" style="background:#A97BFF;"></span> Kotlin</span>
+              </div>
 
             </div>
 
@@ -3382,7 +5465,7 @@ body {
                 </span>
 
                 <span class="tech-tag">
-                  Charts
+                  Chart.js
                 </span>
 
               </div>
@@ -3447,8 +5530,8 @@ body {
               </h3>
 
               <p>
-                A system concept focused on organizing
-                records, improving data accessibility,
+                A desktop application concept focused on
+                organizing records, improving data accessibility,
                 and simplifying everyday information
                 management.
               </p>
@@ -3457,7 +5540,7 @@ body {
               <div class="tech-tags">
 
                 <span class="tech-tag">
-                  PHP
+                  VB.NET
                 </span>
 
                 <span class="tech-tag">
@@ -3465,11 +5548,11 @@ body {
                 </span>
 
                 <span class="tech-tag">
-                  JavaScript
+                  Visual Studio
                 </span>
 
                 <span class="tech-tag">
-                  CRUD
+                  Windows Forms
                 </span>
 
               </div>
@@ -3555,7 +5638,7 @@ body {
                 </span>
 
                 <span class="tech-tag">
-                  MySQL
+                  PHP
                 </span>
 
               </div>
@@ -3629,19 +5712,191 @@ body {
               <div class="tech-tags">
 
                 <span class="tech-tag">
-                  HTML
+                  Kotlin
                 </span>
 
                 <span class="tech-tag">
-                  CSS
+                  Android Studio
                 </span>
 
                 <span class="tech-tag">
-                  JavaScript
+                  Firebase
                 </span>
 
                 <span class="tech-tag">
-                  PWA
+                  XML
+                </span>
+
+              </div>
+
+
+              <div class="project-links">
+
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  GitHub
+                </a>
+
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Live Demo
+
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 05 -->
+
+          <article
+            class="project-card reveal"
+            data-category="mobile"
+          >
+
+            <div class="project-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=1200&q=85"
+                alt="Agronomy mobile application"
+                loading="lazy"
+              >
+
+              <div class="project-overlay"></div>
+
+              <span class="project-number">
+                05
+              </span>
+
+            </div>
+
+
+            <div class="project-content">
+
+              <h3>
+                Agronomy
+              </h3>
+
+              <p>
+                A mobile application for agriculture students
+                to track and monitor plants from seeds to yield,
+                providing growth data and visual insights.
+              </p>
+
+
+              <div class="tech-tags">
+
+                <span class="tech-tag">
+                  Kotlin
+                </span>
+
+                <span class="tech-tag">
+                  Android Studio
+                </span>
+
+                <span class="tech-tag">
+                  Firebase
+                </span>
+
+                <span class="tech-tag">
+                  Material Design
+                </span>
+
+              </div>
+
+
+              <div class="project-links">
+
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  <i class="fa-brands fa-github"></i>
+                  GitHub
+                </a>
+
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  Live Demo
+
+                  <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </article>
+
+
+          <!-- PROJECT 06 -->
+
+          <article
+            class="project-card reveal"
+            data-category="mobile"
+          >
+
+            <div class="project-image">
+
+              <img
+                src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1200&q=85"
+                alt="Mobile Borrowing Item App"
+                loading="lazy"
+              >
+
+              <div class="project-overlay"></div>
+
+              <span class="project-number">
+                06
+              </span>
+
+            </div>
+
+
+            <div class="project-content">
+
+              <h3>
+                Mobile Borrowing Item App
+              </h3>
+
+              <p>
+                A mobile application for managing item
+                borrowing requests, tracking status,
+                and handling returns efficiently.
+              </p>
+
+
+              <div class="tech-tags">
+
+                <span class="tech-tag">
+                  Kotlin
+                </span>
+
+                <span class="tech-tag">
+                  Android Studio
+                </span>
+
+                <span class="tech-tag">
+                  SQLite
+                </span>
+
+                <span class="tech-tag">
+                  XML
                 </span>
 
               </div>
@@ -4087,6 +6342,44 @@ body {
 
 
     /* =========================================================
+       THEME TOGGLE
+    ========================================================= */
+
+    const themeToggle =
+      document.getElementById("themeToggle");
+
+    const themeIcon =
+      themeToggle.querySelector("i");
+
+    // Check for saved theme preference
+    const savedTheme =
+      localStorage.getItem("theme");
+
+    if (savedTheme === "dark") {
+      document.body.classList.add("dark");
+      themeIcon.classList.remove("fa-moon");
+      themeIcon.classList.add("fa-sun");
+    }
+
+    themeToggle.addEventListener("click", () => {
+
+      const isDark =
+        document.body.classList.toggle("dark");
+
+      if (isDark) {
+        themeIcon.classList.remove("fa-moon");
+        themeIcon.classList.add("fa-sun");
+        localStorage.setItem("theme", "dark");
+      } else {
+        themeIcon.classList.remove("fa-sun");
+        themeIcon.classList.add("fa-moon");
+        localStorage.setItem("theme", "light");
+      }
+
+    });
+
+
+    /* =========================================================
        NAVBAR SCROLL EFFECT
     ========================================================= */
 
@@ -4406,7 +6699,52 @@ revealElements.forEach(element => {
 
     setTimeout(typeEffect, 1200);
 
+    // Back to Top Button
+    const backToTopBtn = document.getElementById("backToTop");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 300) {
+        backToTopBtn.classList.add("visible");
+      } else {
+        backToTopBtn.classList.remove("visible");
+      }
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    });
+
   </script>
 
 </body>
+
+<!-- Back to Top Button -->
+<button id="backToTop" aria-label="Back to top"
+  style="position:fixed;bottom:30px;right:30px;width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;border:none;font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transform:translateY(20px);transition:opacity .3s,visibility .3s,transform .3s,background .3s;box-shadow:0 8px 25px rgba(37,99,235,.35);z-index:9999;">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script>
+(function(){
+  var btn = document.getElementById("backToTop");
+  window.addEventListener("scroll", function(){
+    if(window.scrollY > 300){
+      btn.style.opacity = "1";
+      btn.style.visibility = "visible";
+      btn.style.transform = "translateY(0)";
+    } else {
+      btn.style.opacity = "0";
+      btn.style.visibility = "hidden";
+      btn.style.transform = "translateY(20px)";
+    }
+  });
+  btn.addEventListener("click", function(){
+    window.scrollTo({top:0,behavior:"smooth"});
+  });
+})();
+</script>
+
 </html>
